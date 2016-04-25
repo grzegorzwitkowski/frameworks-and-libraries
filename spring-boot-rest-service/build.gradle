@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web:1.3.3.RELEASE"
+}
+
+mainClassName="springbootrestservice.Main"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.12'
+}
