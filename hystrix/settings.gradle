@@ -1,2 +1,5 @@
 rootProject.name = 'hystrix-demo'
 
+include 'client'
+include 'server'
+
