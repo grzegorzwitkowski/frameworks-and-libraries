@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+group 'com.github.grzegorzwitkowski'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web:1.4.2.RELEASE",
+            "com.netflix.hystrix:hystrix-core:1.5.8"
+}
