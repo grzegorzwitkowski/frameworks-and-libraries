@@ -22,7 +22,7 @@ public class UsersController {
 
     @RequestMapping(path = "/users", method = GET)
     public Map<String, User> findAll() {
-        return usersClient.findAll()
+        return new GetUsersCommand(usersClient).execute()
                 .stream()
                 .collect(toMap(User::getId, identity()));
     }
