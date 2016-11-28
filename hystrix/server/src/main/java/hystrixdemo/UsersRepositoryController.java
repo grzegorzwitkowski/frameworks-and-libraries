@@ -11,7 +11,7 @@ import java.util.Map;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
-public class UsersController {
+public class UsersRepositoryController {
 
     private Map<String, User> users = new HashMap<String, User>() {{
         put("1", new User("1", "Jan", "Kowalski", 24));
