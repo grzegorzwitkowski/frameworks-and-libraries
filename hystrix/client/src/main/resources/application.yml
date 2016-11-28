@@ -3,4 +3,4 @@ server.port: 8080
 services:
   users-repository:
     url: http://localhost:8081
-    timeout: 1000
+    timeout: 200
