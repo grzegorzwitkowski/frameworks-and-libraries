@@ -6,7 +6,7 @@ import com.netflix.hystrix.HystrixCommandProperties;
 
 import java.util.List;
 
-import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
 
 public class GetUsersCommand extends HystrixCommand<List<User>> {
 
@@ -29,6 +29,7 @@ public class GetUsersCommand extends HystrixCommand<List<User>> {
 
     @Override
     protected List<User> getFallback() {
-        return emptyList();
+        User fallbackUser = new User("fallback-user-id", "John", "Doe", 42);
+        return singletonList(fallbackUser);
     }
 }
